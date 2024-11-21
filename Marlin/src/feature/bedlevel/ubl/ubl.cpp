@@ -170,7 +170,7 @@ void unified_bed_leveling::display_map(const uint8_t map_type) {
                     twixt = eachsp * (GRID_MAX_POINTS_X) - 9 * 2; // Leading 4sp, Coordinates 9sp each
 
   const bool human = !(map_type & 0x3), csv = map_type == 1, lcd = map_type == 2, comp = map_type & 0x4;
-
+  SERIAL_ECHOPGM("\n@BEDLEVELVISUALIZER");
   SERIAL_ECHOPGM("\nBed Topography Report");
   if (human) {
     SERIAL_ECHOLNPGM(":\n");
